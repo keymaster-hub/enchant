@@ -1,3 +1,24 @@
+function incrementCounter(button) {
+    let currentCount = parseInt(button.textContent.replace('+', ''));
+
+    // Увеличиваем счетчик
+    if (currentCount < 3) {
+        currentCount++;
+    } else {
+        if (Math.random() < 0.7) {
+            currentCount++;
+        } else {
+            currentCount = 0;
+        }
+    }
+    
+    // Обновляем текст на кнопке
+    button.textContent = `+${currentCount}`;
+    
+    // Обновляем цвет кнопки в зависимости от уровня
+    updateButtonColor(button, currentCount);
+}
+
 function updateButtonColor(button, count) {
     if (count < 3) {
         button.style.backgroundColor = '#e0e0e0'; // Серый по умолчанию
