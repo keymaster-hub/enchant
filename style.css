@@ -33,3 +33,10 @@ body {
 .counter-btn:active {
     transform: scale(0.95);
 }
+
+.counters-container {
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 18px;
+}
